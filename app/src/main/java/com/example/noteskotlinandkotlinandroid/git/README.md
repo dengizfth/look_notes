@@ -81,7 +81,31 @@ branch bilgilerini gösterir.
 * `Untracked files`: Git deposu tarafından henüz izlenmeyen yeni dosyalar.
 * `nothing to commit`: commit yapıladığını belirtiyor.
 
-* Not: ->Ana brach ismi değişiklik gösterebilir . main-master-dev-develop vs. 
-       -> Ana brach ismini kendin verebilirsin ya da verilmiş olabilir.
+  * Not: ->Ana brach ismi değişiklik gösterebilir . main-master-dev-develop vs. 
+         -> Ana brach ismini kendin verebilirsin ya da verilmiş olabilir.
+    ![img.png](img.png)
+    -> Kırmızı yazı : git add ve commit atılmamış bir değişikliğin var ve bu stage area'da değil.
+        
+    ![img_1.png](img_1.png)
+    -> kırmızı yazı alanı yukarıdaki ile aynı
+    -> Yeşil Yazı :  git add yapıldı ve stage alanına geçirildi ve stage alanında push'lamayı bekleyecek.
+
+    Not : git add ile staging area'ya ekleriz . stagin area'ya eklediğimiz değişiklikleri commit'leriz
+  daha sonra git push origin main(brach adı) ile uzaktaki repoya push'larız.
+
+    
+* `untracked file`:  Git deponuz tarafından henüz izlenmeyen bir dosyadır. 
+* Yani, bu dosya depo geçmişinizde yer almaz ve Git tarafından değişiklikleri takip edilmez.
+  **Untracked Dosyaların Özellikleri:**
+
+* **Yeni Dosyalar:** Genellikle yeni oluşturulan dosyalar untracked olarak başlar.
+* **`.gitignore` Dosyasında Belirtilen Dosyalar:** `.gitignore` dosyasında belirtilen dosyalar ve dizinler de untracked olarak kabul edilir ve Git tarafından izlenmez.
+* **Değişiklikleri Takip Edilmez:** Untracked dosyalar üzerinde yapılan değişiklikler, `git status` komutu ile listelenir ancak Git tarafından versiyonlanmaz.
+  
+* **Untracked Dosyaları İzlemeye Başlama:**
+
+Untracked bir dosyayı Git tarafından izlemeye başlamak için, **`git add dosyaAdi`** komutunu kullanarak dosyayı staging area'ya eklemeniz gerekir. Bu işlem, dosyayı izlenen dosyalar listesine ekler ve bir sonraki commit'te depolanmasını sağlar.
+
+### git status -b  ve git status -s kısa açıklamalı geri dönüşleri sağlar
 
 
