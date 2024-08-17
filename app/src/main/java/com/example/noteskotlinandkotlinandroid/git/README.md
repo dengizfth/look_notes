@@ -93,7 +93,7 @@ branch bilgilerini gösterir.
     Not : git add ile staging area'ya ekleriz . stagin area'ya eklediğimiz değişiklikleri commit'leriz
   daha sonra git push origin main(brach adı) ile uzaktaki repoya push'larız.
 
-    
+    ## untracked file
 * `untracked file`:  Git deponuz tarafından henüz izlenmeyen bir dosyadır. 
 * Yani, bu dosya depo geçmişinizde yer almaz ve Git tarafından değişiklikleri takip edilmez.
   **Untracked Dosyaların Özellikleri:**
@@ -108,4 +108,13 @@ Untracked bir dosyayı Git tarafından izlemeye başlamak için, **`git add dosy
 
 ### git status -b  ve git status -s kısa açıklamalı geri dönüşleri sağlar
 
+
+
+## git add 
+    -> nokta .(all) anlamındadır . Bütün hepsini alır.
+    -> git add dosyaAdi şeklinde sadece bir dosyayı add yapabiliriz. staged area'alır.Commite hazırdır.
+    -> untracked file olan bir dosyayı git üzerinden takip edilmesi için git add dosyaAdı şeklinde de ekleyebiliriz.
+    
+    -> nokta .(all) demek . "git add ."
+    -> git add --all  ve git add --a  untract file 'dakiler dahil her şeyi stage area'ya ekler
 
