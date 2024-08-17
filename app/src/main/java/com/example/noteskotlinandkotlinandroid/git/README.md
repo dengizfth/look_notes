@@ -45,5 +45,43 @@ yerel olarak üzerinde çalışmanıza olanak tanır.
 -> sadece belirtilen branch'in geçmişini alarak yukarıdaki işlemleri gerçekleştirir.
 * Not: Diğer brach'lerinde geçmişini ve erişimi istemek için direk "git clone" yeterli olucaktır
 
+## git status
+->Git deponuzun şu anki durumunu görüntülemek için kullanılan temel bir Git komutudur. 
+Bu komut, çalışma dizininizdeki ve staging alanınızdaki değişiklikleri, izlenmeyen dosyaları ve 
+branch bilgilerini gösterir.
+* **Hangi branch'te olduğunuzu:** Mevcut branch'inizi gösterir.
+* **Değiştirilen dosyalar:** İzlenen dosyalarda yapılan değişiklikleri listeler.
+* **Staging alanındaki dosyalar:** Commit edilmek üzere staging alanına eklenen dosyaları gösterir.
+* **İzlenmeyen dosyalar:** Git deposu tarafından henüz izlenmeyen yeni dosyaları listeler.
+* **Commit edilmemiş değişiklikler:** Henüz commit edilmemiş değişiklikleri gösterir.
+* Örnek Çıktı
+```
+  On branch main
+  Your branch is up to date with 'origin/main'.
+  
+  Changes to be committed:
+    (use "git restore --staged <file>..." to unstage)
+      modified:   card_view.xml
+  
+  Changes not staged for commit:
+    (use "git add <file>..." to update what will be committed)
+    (use "git restore <file>..." to discard changes in working directory)
+      modified:   MainActivity.kt
+  
+  Untracked files:
+    (use "git add <file>..." to include in what will be committed)
+      recycler_view.xml
+```
+**Özet Açıklama :**
+
+* `On branch main`: Mevcut branch'in `main` olduğunu gösterir.
+* `Your branch is up to date with 'origin/main'`: Yerel `main` branch'inizin uzak `origin/main` branch'i ile aynı olduğunu gösterir.
+* `Changes to be committed`: Staging alanında commit edilmeyi bekleyen değişiklikler.
+* `Changes not staged for commit`: Çalışma dizininde yapılan ancak henüz staging alanına eklenmemiş değişiklikler.
+* `Untracked files`: Git deposu tarafından henüz izlenmeyen yeni dosyalar.
+* `nothing to commit`: commit yapıladığını belirtiyor.
+
+* Not: ->Ana brach ismi değişiklik gösterebilir . main-master-dev-develop vs. 
+       -> Ana brach ismini kendin verebilirsin ya da verilmiş olabilir.
 
 
