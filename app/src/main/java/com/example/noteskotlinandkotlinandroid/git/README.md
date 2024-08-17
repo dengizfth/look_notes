@@ -118,3 +118,17 @@ Untracked bir dosyayı Git tarafından izlemeye başlamak için, **`git add dosy
     -> nokta .(all) demek . "git add ."
     -> git add --all  ve git add --a  untract file 'dakiler dahil her şeyi stage area'ya ekler
 
+## git reset : dikkat edilmesi gereken bir konu! Kullanım öncesi 2 kere düşün
+    -> Git'te değişiklikleri geri almak veya staging area'yı temizlemek için kullanılan güçlü ve 
+çok yönlü bir komuttur. Bu komut, farklı parametrelerle kullanılarak farklı işlemler gerçekleştirir 
+ve dikkatli kullanılması gerekir.
+
+
+* **`--soft`:** Bu parametre, sadece **HEAD işaretçisini** belirtilen commit'e taşır. Çalışma dizininiz ve staging area'nızdaki değişiklikler korunur. Bu, son commit'i geri almak ve değişiklikleri tekrar düzenlemek istediğinizde kullanışlıdır.
+* **`--mixed` (Varsayılan):** Bu parametre, **HEAD işaretçisini** belirtilen commit'e taşır ve **staging area'yı temizler.** Çalışma dizininizdeki değişiklikler korunur. Bu, staging area'yı temizlemek ve değişiklikleri tekrar eklemek istediğinizde kullanışlıdır.
+* **`--hard`:** Bu parametre, **HEAD işaretçisini** belirtilen commit'e taşır, **staging area'yı temizler ve çalışma dizininizdeki değişiklikleri de siler.** Bu, tüm değişiklikleri geri almak ve belirtilen commit'e geri dönmek istediğinizde kullanışlıdır. **DİKKAT:** Bu seçenekle yapılan değişiklikler geri alınamaz.
+
+ -> git reset komutunu kullanırken, genellikle bir commit referansı belirtirsiniz. Bu referans, bir commit'in SHA-1 hash'i, bir branch adı veya HEAD'e göre göreceli bir referans olabilir.
+       |- git reset --soft HEAD~1
+       |- git reset HEAD
+       |- git reset --hard <commit_hash>
