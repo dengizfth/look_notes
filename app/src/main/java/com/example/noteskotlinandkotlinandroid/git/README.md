@@ -143,7 +143,7 @@ anlamak, Git'i etkili bir şekilde kullanmak için önemlidir.
     -> git diff  : staged area'da olmayan diğer değişiklikleri verir.
     -> git reset yaparak staged area'daki değişiklikleri geri alır .
     
-HEAD = commit
+HEAD = Branch(dal)
 
 **`git diff` Komutunun Kullanım Senaryoları:**
 
@@ -214,3 +214,4 @@ HEAD = commit
     -> git add'den sonra staged area'ya alınan verilere commit atılır ve geriye sadece pushlama kalır.
     -> pushlamadan önce git fetch yapıp uzaktaki repodaki değişiklikleri local'a çekmek gerekir.
 
+## git log
