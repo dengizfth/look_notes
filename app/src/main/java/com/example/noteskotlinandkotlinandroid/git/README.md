@@ -338,13 +338,13 @@ Bu nedenle, `git pull` komutu, `git fetch` ve `git merge` komutlarının birleş
     -> brach'ler arasında geçiş yapılabilir.
     -> kullanım amacı bir çok yönden farklı . Proje üzerinde farklı olarak deneme yapmak için kullanılabilir vs.
 
-## git checkout -b  brachIsmi
+## git checkout -b  featur/brachIsmi
     -> yeni bir branch oluşturur ve oluşturulan branch'e geçiş yapar.
 
 ## git checkout main
     -> main brach'ine geçiş yapar .
-## git merge brachIsmi
-    -> main branch'ine geçiş yaptıktan sonra main'e brachIsmi adlı branch'i birleştirir
+## git merge featur/brachIsmi
+    -> main branch'ine geçiş yaptıktan sonra main'e featur/brachIsmi adlı branch'i birleştirir
     -> açılan branch'leri main'de birleştirir. 
     -> git push origin main  işleminden sonra main brach'i ile beraber uzak depoya gönderilir.
 
