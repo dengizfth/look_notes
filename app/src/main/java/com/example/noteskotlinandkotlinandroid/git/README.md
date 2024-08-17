@@ -317,3 +317,8 @@ HEAD = Branch(dal)
    ```bash
    git push -f origin main
    ```
+* **`--tags` :** etiketleme işlemi , tag üzerinden 
+
+   ```bash
+   git push -f origin main
+   ```
