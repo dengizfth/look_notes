@@ -132,3 +132,77 @@ ve dikkatli kullanılması gerekir.
        |- git reset --soft HEAD~1
        |- git reset HEAD
        |- git reset --hard <commit_hash>
+ 
+
+## git diff 
+    ->  değişiklikleri karşılaştırmak için kullanılan temel bir araçtır. Bu komut, 
+farklı dosya sürümleri, commit'ler, branch'ler ve hatta staging area ile çalışma dizini arasındaki 
+farkları gösterir. git diff komutunun birçok farklı kullanım senaryosu vardır ve bu senaryoları
+anlamak, Git'i etkili bir şekilde kullanmak için önemlidir.
+
+HEAD = commit
+
+**`git diff` Komutunun Kullanım Senaryoları:**
+
+1. **Çalışma Dizini ile Staging Area Arasındaki Farkları Görüntüleme:**
+
+    - `git diff` komutu, herhangi bir parametre olmadan kullanıldığında, çalışma dizininizdeki değişiklikler ile staging area'daki değişiklikler arasındaki farkları gösterir. Bu, hangi değişikliklerin commit'e hazır olduğunu ve hangilerinin hala düzenleme aşamasında olduğunu görmenizi sağlar.
+
+   ```bash
+   git diff
+   ```
+
+2. **İki Commit Arasındaki Farkları Görüntüleme:**
+
+    - `git diff <commit_1> <commit_2>` komutu, iki commit arasındaki farkları gösterir. Bu, belirli bir zaman aralığında hangi değişikliklerin yapıldığını anlamanızı sağlar.
+
+   ```bash
+   git diff HEAD~1 HEAD
+   ```
+
+3. **Bir Branch ile Başka Bir Branch Arasındaki Farkları Görüntüleme:**
+
+    - `git diff <branch_1> <branch_2>` komutu, iki branch arasındaki farkları gösterir. Bu, farklı branch'lerde yapılan değişiklikleri karşılaştırmanızı sağlar.
+
+   ```bash
+   git diff main feature-branch
+   ```
+
+4. **Bir Dosyanın Farklı Sürümleri Arasındaki Farkları Görüntüleme:**
+
+    - `git diff <dosya_adı>` komutu, belirtilen dosyanın çalışma dizinindeki sürümü ile staging area'daki sürümü arasındaki farkları gösterir.
+    - `git diff --cached <dosya_adı>` komutu, belirtilen dosyanın staging area'daki sürümü ile son commit'teki sürümü arasındaki farkları gösterir.
+    - `git diff <commit_1> <commit_2> <dosya_adı>` komutu, belirtilen dosyanın iki commit arasındaki farklarını gösterir.
+
+   ```bash
+   git diff README.md
+   git diff --cached README.md
+   git diff HEAD~1 HEAD README.md
+   ```
+
+5. **Belirli Bir Satır Aralığındaki Farkları Görüntüleme:**
+
+    - `git diff -U<satır_sayısı> <dosya_adı>` komutu, belirtilen dosyadaki değişikliklerin etrafındaki belirli sayıda satırı da gösterir. Bu, değişikliklerin bağlamını anlamanızı sağlar.
+
+   ```bash
+   git diff -U3 README.md
+   ```
+
+6. **İstatistiksel Bilgileri Görüntüleme:**
+
+    - `git diff --stat` komutu, değişikliklerin özetini gösterir, hangi dosyaların değiştiğini ve her dosyada kaç satır eklendiğini veya silindiğini gösterir.
+
+   ```bash
+   git diff --stat
+   ```
+
+**`git diff` Komutunun Parametreleri:**
+
+`git diff` komutu, birçok farklı parametre ile kullanılabilir. En yaygın kullanılan parametrelerden bazıları şunlardır:
+
+* `--cached`: Staging area'daki değişiklikleri gösterir.
+* `--staged`: `--cached` ile aynıdır.
+* `-p` veya `--patch`: Değişiklikleri patch formatında gösterir.
+* `-U<satır_sayısı>`: Değişikliklerin etrafındaki belirli sayıda satırı gösterir.
+* `--stat`: Değişikliklerin özetini gösterir.
+* `--color`: Değişiklikleri renkli olarak gösterir.
