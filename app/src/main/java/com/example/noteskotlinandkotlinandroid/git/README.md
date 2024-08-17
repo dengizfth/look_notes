@@ -209,3 +209,8 @@ HEAD = commit
 * `-U<satır_sayısı>`: Değişikliklerin etrafındaki belirli sayıda satırı gösterir.
 * `--stat`: Değişikliklerin özetini gösterir.
 * `--color`: Değişiklikleri renkli olarak gösterir.
+
+## git commit -m "commit ekle"
+    -> git add'den sonra staged area'ya alınan verilere commit atılır ve geriye sadece pushlama kalır.
+    -> pushlamadan önce git fetch yapıp uzaktaki repodaki değişiklikleri local'a çekmek gerekir.
+
