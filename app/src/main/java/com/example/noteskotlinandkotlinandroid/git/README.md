@@ -296,3 +296,24 @@ HEAD = Branch(dal)
 * `--author=<yazar>`: Belirtilen yazarın commit'lerini gösterir.
 * `--since=<tarih>` ve `--until=<tarih>`: Belirtilen tarih aralığındaki commit'leri gösterir.
 * `-<sayı>`: Belirtilen sayıda commit'i gösterir.
+
+
+
+## git push  ya da git push origin main
+    git push <uzak_depo_adı> <branch_adı>
+    -> <uzak_depo_adı>: Uzak deponun adıdır. Genellikle origin olarak adlandırılır.
+    -> <branch_adı>: Yerel olarak yaptığınız değişiklikleri içeren branch'in adıdır. 
+        Genellikle main veya master branch'ine push yapılır.
+* **`-u` veya `--set-upstream`:** Bu parametre, yerel branch'i uzak branch ile ilişkilendirir. 
+* Bu sayede, bir sonraki push işleminde sadece `git push` komutunu kullanmanız yeterli olur.
+
+   ```bash
+   git push -u origin main
+   ```
+
+* **`-f` veya `--force`:** Bu parametre, uzak depoya zorla push yapmanızı sağlar. 
+*  Bu, uzak depoda yapılan değişiklikleri ezebileceği için dikkatli kullanılmalıdır.
+
+   ```bash
+   git push -f origin main
+   ```
