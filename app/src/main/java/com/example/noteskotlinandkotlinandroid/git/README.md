@@ -332,16 +332,25 @@ Bu nedenle, `git pull` komutu, `git fetch` ve `git merge` komutlarının birleş
 
 
 
+## git branch
+    -> üzerinde çalıştığın branch'i verir. 
+    -> Ana branch'e yan dal olarak yeni branch oluşturmak için kullanılır.
+    -> brach'ler arasında geçiş yapılabilir.
+    -> kullanım amacı bir çok yönden farklı . Proje üzerinde farklı olarak deneme yapmak için kullanılabilir vs.
 
+## git checkout -b  brachIsmi
+    -> yeni bir branch oluşturur ve oluşturulan branch'e geçiş yapar.
 
+## git checkout main
+    -> main brach'ine geçiş yapar .
+## git merge brachIsmi
+    -> main branch'ine geçiş yaptıktan sonra main'e brachIsmi adlı branch'i birleştirir
+    -> açılan branch'leri main'de birleştirir. 
+    -> git push origin main  işleminden sonra main brach'i ile beraber uzak depoya gönderilir.
 
-
-
-
-
-
-
-
+    * git branch komutu, mevcut branch'leri listelemek için kullanılır.
+    * git checkout <branch_adı> komutu, belirtilen branch'e geçmek için kullanılır.
+    * git merge <branch_adı> komutu, belirtilen branch'i mevcut branch'e merge etmek için kullanılır.
 
 
 
