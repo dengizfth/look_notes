@@ -322,3 +322,26 @@ HEAD = Branch(dal)
    ```bash
    git push -f origin main
    ```
+
+## git fetch   -   git pull
+    -> git fetch <uzak_depo_adı>  : genellikte "git fetch orgin" olarak kullanılır.
+    -> <uzak_depo_adı>: Uzak deponun adıdır. Genellikle origin olarak adlandırılır.
+`git fetch` komutu, sadece uzak depodaki değişiklikleri indirirken, `git pull` komutu hem 
+uzak depodaki değişiklikleri indirir hem de yerel branch'inizi günceller. 
+Bu nedenle, `git pull` komutu, `git fetch` ve `git merge` komutlarının birleşimidir.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
