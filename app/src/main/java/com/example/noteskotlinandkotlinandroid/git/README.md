@@ -215,3 +215,84 @@ HEAD = Branch(dal)
     -> pushlamadan önce git fetch yapıp uzaktaki repodaki değişiklikleri local'a çekmek gerekir.
 
 ## git log
+    -> atılan commitleri gösterir 
+    -> localdeki commitleri ve uzak repodaki commitleri gösterir
+
+**`git log` Komutunun Kullanım Senaryoları:**
+
+1. **Depo Geçmişini İnceleme:**
+
+    - `git log` komutu, herhangi bir parametre olmadan kullanıldığında, depo geçmişini kronolojik sırayla listeler. Bu, proje üzerinde yapılan değişiklikleri, kimin tarafından yapıldığını ve ne zaman yapıldığını görmenizi sağlar.
+
+   ```bash
+   git log
+   ```
+
+2. **Belirli Bir Sayıda Commit'i Görüntüleme:**
+
+    - `git log -<sayı>` komutu, belirtilen sayıda commit'i gösterir. Örneğin, son 5 commit'i görmek için `git log -5` komutunu kullanabilirsiniz.
+
+   ```bash
+   git log -5
+   ```
+
+3. **Belirli Bir Tarih Aralığındaki Commit'leri Görüntüleme:**
+
+    - `git log --since=<tarih>` ve `git log --until=<tarih>` komutları, belirtilen tarih aralığındaki commit'leri gösterir. Tarih, çeşitli formatlarda belirtilebilir (örneğin, "2023-10-27", "yesterday", "2 weeks ago").
+
+   ```bash
+   git log --since="2023-10-26" --until="2023-10-27"
+   ```
+
+4. **Belirli Bir Yazarın Commit'lerini Görüntüleme:**
+
+    - `git log --author=<yazar>` komutu, belirtilen yazarın commit'lerini gösterir.
+
+   ```bash
+   git log --author="John Doe"
+   ```
+
+5. **Belirli Bir Dosyada Yapılan Değişiklikleri Görüntüleme:**
+
+    - `git log -p <dosya_adı>` komutu, belirtilen dosyada yapılan değişiklikleri gösterir.
+
+   ```bash
+   git log -p README.md
+   ```
+
+6. **Birleşme (Merge) Commit'lerini Görüntüleme:**
+
+    - `git log --merges` komutu, sadece birleşme commit'lerini gösterir.
+
+   ```bash
+   git log --merges
+   ```
+
+7. **Grafiksel Olarak Geçmişi Görüntüleme:**
+
+    - `git log --graph` komutu, branch'lerin ve birleşmelerin görsel bir temsilini gösterir.
+
+   ```bash
+   git log --graph
+   ```
+
+8. **Kısa Bir Özet Görüntüleme:**
+
+    - `git log --oneline` komutu, her commit için tek bir satırda özet bilgi gösterir.
+
+   ```bash
+   git log --oneline
+   ```
+
+**`git log` Komutunun Parametreleri:**
+
+`git log` komutu, birçok farklı parametre ile kullanılabilir. En yaygın kullanılan parametrelerden bazıları şunlardır:
+
+* `-p` veya `--patch`: Her commit'in değişikliklerini gösterir.
+* `--stat`: Her commit'in hangi dosyaları değiştirdiğini ve kaç satır eklendiğini veya silindiğini gösterir.
+* `--pretty=<format>`: Çıktının formatını özelleştirmenizi sağlar.
+* `--oneline`: Her commit için tek bir satırda özet bilgi gösterir.
+* `--graph`: Branch'lerin ve birleşmelerin görsel bir temsilini gösterir.
+* `--author=<yazar>`: Belirtilen yazarın commit'lerini gösterir.
+* `--since=<tarih>` ve `--until=<tarih>`: Belirtilen tarih aralığındaki commit'leri gösterir.
+* `-<sayı>`: Belirtilen sayıda commit'i gösterir.
