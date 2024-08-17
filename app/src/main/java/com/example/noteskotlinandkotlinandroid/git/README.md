@@ -139,7 +139,9 @@ ve dikkatli kullanılması gerekir.
 farklı dosya sürümleri, commit'ler, branch'ler ve hatta staging area ile çalışma dizini arasındaki 
 farkları gösterir. git diff komutunun birçok farklı kullanım senaryosu vardır ve bu senaryoları
 anlamak, Git'i etkili bir şekilde kullanmak için önemlidir.
-
+    -> git diff --staged  : stage areadaki değişiklikleri gösterir.
+    -> git reset yaparak staged area'daki değişiklikleri geri alır .
+    
 HEAD = commit
 
 **`git diff` Komutunun Kullanım Senaryoları:**
